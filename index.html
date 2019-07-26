@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Brush</title>
+        <link rel="stylesheet" href="./style/main.css" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="icon" href="./images/favicon.png"/>
+        <meta property="og:image" content="./images/colors.jpg">
+    </head>
+    <body>
+       
+        <h1>Draw anything<hr /></h1>
+        <span title="help" id="help">?</span>
+        <section>
+        <label title="color" for="colors" id="forcolors"></label>
+        <input type="color" id="colors"/>
+        <input title="size" type="range" min="1" max="50" step="any" id="width" value="5"/>
+        <button title="random colors" id="rand"><i class="fa fa-random" aria-hidden="true"></i>
+        </button>
+        <br />
+        <input type="radio" name="btn" id="fr" checked/>
+        <label title="brush" id="free" for="fr"><i class="fa fa-paint-brush" aria-hidden="true"></i></label>
+        <input type="radio" name="btn" id="er" />
+        <label title="eraser" id="araser" for="er"><i class="fa fa-eraser" aria-hidden="true"></i></label>
+        <input type="radio" name="btn" id="li" />
+        <label title="line" id="line" for="li">/</label>
+        <input type="radio" name="btn" id="re" />
+        <label title="border" id="rect" for="re"><i class="fa fa-square-o" aria-hidden="true"></i>
+        </label>
+        <input type="radio" name="btn" id="rebg" />
+        <label title="rectangle" id="rectbg" for="rebg"><i class="fa fa-square" aria-hidden="true"></i>
+        </label>
+        <input type="radio" name="btn" id="tr" />
+        <label title="triangle without background" id="triangle" for="tr">∆</label>
+        <input type="radio" name="btn" id="trbg" />
+        <label title="triangle" id="trianglebg" for="trbg">▲</label>
+        <br />
+        <img src="" id="insertimg"/>
+        <label title="image" for="inptimg" id="forimg"><i class="fa fa-file-image-o" aria-hidden="true"></i>
+        </label>
+        <input type="file" accept="image/*" onchange="loadFile(event)" id="inptimg" />
+        <a title="download" id="download" href="" download ><i class="fa fa-download" aria-hidden="true"></i>
+        </a>
+        <button title="reset" id="new"><i class="fa fa-repeat" aria-hidden="true"></i>
+        </button>
+        </section>
+       <!-- <div align="center" style="min-height:100px">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+             paint 
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3134371406804208"
+                 data-ad-slot="7023104358"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>-->
+        <canvas></canvas>
+        <div id="helpContent">
+        <div id="img"></div>
+        </div>
+        <a id="me" href="https://www.facebook.com/AhmadFathy97" target="_blank">Ahmad Fathy</a>
+        <audio id="audio" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3"></audio>
+        
+        <script src="./js/main.js"></script>
+    </body>
+</html>
