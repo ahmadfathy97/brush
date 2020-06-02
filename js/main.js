@@ -121,10 +121,12 @@ helpCon.onclick = function(){
 
 /*************************************/
   
+let r = (Math.random() * 360) || 0;
 function draw(e) {
   if(!isdraw) return;
   if (randcolors) {
-    var r = (Math.random() * 360) | 0;
+    if(r >= 360) r = 0;
+    r++;
     c.strokeStyle = 'hsl(' + r + ',100%,50%)';
     c.fillStyle = 'hsl(' + r + ',100%,50%)';
   }
